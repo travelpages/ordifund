@@ -65,6 +65,7 @@ h2 { margin-bottom: 25px; color: var(--navy); font-family: Georgia, "Times New R
 .section-heading > p:last-child { color: var(--muted); font-size: 1.08rem; }
 .strategy-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .strategy-grid article { min-height: 260px; padding: 34px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.strategy-grid .strategy-wide { grid-column: 1 / -1; min-height: 220px; }
 .number { color: var(--gold); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
 .strategy-grid h3 { margin: 52px 0 14px; color: var(--navy); font-family: Georgia, serif; font-size: 1.65rem; font-weight: 400; }
 .strategy-grid p { max-width: 470px; color: var(--muted); }
@@ -92,18 +93,20 @@ h2 { margin-bottom: 25px; color: var(--navy); font-family: Georgia, "Times New R
 .track-facts div { display: flex; justify-content: space-between; gap: 30px; padding: 24px 28px; border-bottom: 1px solid var(--line); }
 .track-facts dt { color: var(--muted); }
 .track-facts dd { margin: 0; color: var(--navy); font-weight: 750; text-align: right; }
-.contact-section { display: grid; grid-template-columns: 1.2fr .8fr; gap: 90px; background: var(--white); }
+.contact-section { display: grid; grid-template-columns: 1fr; gap: 42px; background: var(--white); }
+.contact-section > div:first-child { max-width: 780px; }
 .contact-section > div:first-child > p:last-child { color: var(--muted); }
-.inquiry-form { position: relative; display: grid; gap: 18px; padding: 40px; background: var(--blue); color: var(--white); border-left: 5px solid var(--gold); }
+.inquiry-form { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; padding: 42px 48px; background: var(--blue); color: var(--white); border-left: 5px solid var(--gold); }
 .inquiry-form label { display: grid; gap: 7px; color: #d9e1e7; font-size: .86rem; font-weight: 650; }
 .inquiry-form input, .inquiry-form select, .inquiry-form textarea { width: 100%; border: 1px solid rgba(255,255,255,.35); border-radius: 0; background: rgba(9,29,45,.42); color: var(--white); padding: 12px 13px; font: inherit; }
 .inquiry-form input:focus, .inquiry-form select:focus, .inquiry-form textarea:focus { outline: 2px solid var(--gold-light); outline-offset: 1px; }
 .inquiry-form textarea { resize: vertical; min-height: 120px; }
 .inquiry-form select option { color: var(--ink); background: var(--white); }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.full-field, .inquiry-form .consent, .form-status, .form-note { grid-column: 1 / -1; }
 .inquiry-form .consent { display: flex; align-items: flex-start; gap: 10px; font-size: .78rem; font-weight: 400; }
 .inquiry-form .consent input { width: auto; margin-top: 3px; }
-.inquiry-form .button { border: 0; cursor: pointer; }
+.inquiry-form .button { width: fit-content; min-width: 180px; border: 0; cursor: pointer; }
 .form-note, .form-status { margin: 0; color: #c5d1d8; font-size: .75rem; }
 .form-status:not(:empty) { padding: 10px 12px; border-left: 2px solid var(--gold-light); }
 .honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
@@ -132,6 +135,7 @@ footer { padding: 70px max(6vw, calc((100vw - var(--max))/2)); background: var(-
   .hero-intro { font-size: 1rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .strategy-grid, .risk-columns, .disclosure { grid-template-columns: 1fr; }
+  .strategy-grid .strategy-wide { grid-column: auto; }
   .strategy-grid article { min-height: auto; }
   .risk-columns { gap: 25px; }
   .risk-columns > div + div { padding: 25px 0 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.25); }
@@ -139,7 +143,8 @@ footer { padding: 70px max(6vw, calc((100vw - var(--max))/2)); background: var(-
   .track-facts div { flex-direction: column; gap: 3px; }
   .track-facts dd { text-align: left; }
   .form-row { grid-template-columns: 1fr; }
-  .inquiry-form { padding: 28px 22px; }
+  .inquiry-form { grid-template-columns: 1fr; padding: 28px 22px; }
+  .form-row, .full-field, .inquiry-form .consent, .form-status, .form-note { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
