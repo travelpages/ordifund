@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<!-- saved from url=(0048)https://www.ordifund.com/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ORDI LP is an income-focused private investment partnership specializing in publicly traded oil royalty and energy securities.">
+  <link rel="canonical" href="https://www.ordifund.com/">
+  <meta property="og:title" content="ORDI LP | Oil Royalty & Dividend Income">
+  <meta property="og:description" content="An income-focused private investment partnership specializing in publicly traded oil royalty and energy securities.">
+  <meta property="og:url" content="https://www.ordifund.com/">
+  <meta property="og:type" content="website">
   <title>ORDI LP | Oil Royalty &amp; Dividend Income</title>
-  <link rel="stylesheet" href="./ORDI Fund_files/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="https://www.ordifund.com/#top" aria-label="ORDI LP home">
+    <a class="brand" href="#top" aria-label="ORDI LP home">
       <span class="brand-mark">O</span>
       <span>ORDI <small>LP</small></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav id="primary-nav" aria-label="Primary navigation">
-      <a href="https://www.ordifund.com/#approach">Approach</a>
-      <a href="https://www.ordifund.com/#strategy">Strategy</a>
-      <a href="https://www.ordifund.com/#risk">Risk</a>
-      <a href="https://www.ordifund.com/#track-record">Track record</a>
-      <a class="nav-cta" href="mailto:info@ordifund.com?subject=ORDI%20LP%20Inquiry">Contact</a>
+      <a href="#approach">Approach</a>
+      <a href="#strategy">Strategy</a>
+      <a href="#risk">Risk</a>
+      <a href="#track-record">Track record</a>
+      <a class="nav-cta" href="#inquiry">Contact</a>
     </nav>
   </header>
 
@@ -30,8 +35,8 @@
         <h1>Oil royalty and<br><span>dividend income</span></h1>
         <p class="hero-intro">An income-focused energy strategy designed to generate quarterly cash distributions from realized investment earnings while retaining participation in long-term sector appreciation.</p>
         <div class="hero-actions">
-          <a class="button primary" href="https://www.ordifund.com/#approach">Explore the approach</a>
-          <a class="button secondary" href="mailto:info@ordifund.com?subject=Request%20ORDI%20Investor%20Materials">Request investor materials</a>
+          <a class="button primary" href="#approach">Explore the approach</a>
+          <a class="button secondary" href="#inquiry">Request investor materials</a>
         </div>
         <p class="eligibility-line">Private investment partnership · Materials available to eligible investors</p>
       </div>
@@ -148,7 +153,7 @@
         <p class="section-label">Track record</p>
         <h2>Operating since July 2019.</h2>
         <p>ORDI has navigated multiple energy-market regimes while maintaining a quarterly distribution framework. Detailed performance, methodology and benchmark comparisons are provided only in appropriate investor materials.</p>
-        <a class="text-link" href="mailto:info@ordifund.com?subject=Request%20ORDI%20Performance%20Materials">Request performance materials <span>→</span></a>
+        <a class="text-link" href="#inquiry">Request performance materials <span>→</span></a>
       </div>
       <dl class="track-facts">
         <div><dt>Inception</dt><dd>July 22, 2019</dd></div>
@@ -158,17 +163,36 @@
       </dl>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="inquiry">
       <div>
         <p class="section-label">Investor inquiries</p>
         <h2>Continue the conversation.</h2>
         <p>For information about eligibility, fund terms and access to offering materials, contact ORDI Management LLC.</p>
       </div>
-      <div class="contact-card">
-        <a href="mailto:info@ordifund.com">info@ordifund.com</a>
-        <span>281 980 0656</span>
-        <span>4502 Riverstone Blvd, Suite 1001<br>Missouri City, TX 77459</span>
-      </div>
+      <form class="inquiry-form" id="inquiry-form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from ORDIFund.com">
+        <input type="hidden" name="form_started_at" id="form-started-at" value="">
+        <div class="honeypot" aria-hidden="true">
+          <label>Leave this field blank <input name="company_website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="form-row">
+          <label>Full name <span aria-hidden="true">*</span><input name="name" autocomplete="name" required maxlength="100"></label>
+          <label>Email <span aria-hidden="true">*</span><input type="email" name="email" autocomplete="email" required maxlength="160"></label>
+        </div>
+        <label>Organization <input name="organization" autocomplete="organization" maxlength="160"></label>
+        <label>Inquiry type
+          <select name="inquiry_type">
+            <option>General inquiry</option>
+            <option>Request investor materials</option>
+            <option>Request performance materials</option>
+          </select>
+        </label>
+        <label>Message <span aria-hidden="true">*</span><textarea name="message" rows="5" required maxlength="3000"></textarea></label>
+        <label class="consent"><input type="checkbox" required> <span>I understand that submitting this form does not constitute an offer, subscription, or investment commitment.</span></label>
+        <button class="button primary" type="submit">Submit inquiry</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">Your contact information will be used only to respond to this inquiry. Please do not submit sensitive financial information.</p>
+      </form>
     </section>
   </main>
 
@@ -178,10 +202,9 @@
       <p>This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to purchase any security. Any offering will be made only through definitive offering documents and only to persons who satisfy applicable eligibility requirements.</p>
       <p>Investing involves risk, including the possible loss of principal. Energy-focused investments may be affected by commodity prices, regulation, market concentration and other sector-specific factors. Past performance does not guarantee future results.</p>
     </div>
-    <p class="copyright">© <span id="year">2026</span> ORDI Management LLC. All rights reserved.</p>
+    <p class="copyright">© <span id="year"></span> ORDI Management LLC. All rights reserved.</p>
   </footer>
 
-  <script src="./ORDI Fund_files/script.js.download"></script>
-
-
-</body></html>
+  <script src="script.js"></script>
+</body>
+</html>
