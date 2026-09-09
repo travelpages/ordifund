@@ -29,5 +29,6 @@ Built-in protections include a hidden honeypot, a minimum completion-time check,
 - `dist/index.html` — page content and inquiry form
 - `dist/styles.css` — design and responsive layout
 - `dist/script.js` — navigation and anti-spam checks
+- `dist/favicon.svg` — browser-tab icon
 - `dist/CNAME` — GitHub Pages custom domain
 - `dist/.nojekyll` — disables Jekyll processing
